@@ -4,79 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ND Computer Club</title>
-
-    <style>
-        /* CSS Reset */
-        * {
-            box-sizing: border-box;
-        }
-        html {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            margin: 0;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: lightgray;
-            padding: 10px 50px;
-        }
-
-        .officer-section {
-            background-color: lightblue;
-            overflow: auto;
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .officer-photo {
-            width: 200px;
-            height: 200px;
-            border: 5px solid black;
-        }
-
-        .officer-section:nth-child(odd) .officer-photo {
-            float: left;
-            margin-right: 30px;
-        }
-
-        .officer-section:nth-child(even) .officer-photo {
-            float: right;
-            margin-left: 30px;
-        }
-
-        .officer-section:nth-child(even) {
-            text-align: right;
-        }
-
-        .officer-name, .officer-role {
-            margin: 0;
-        }
-
-        .officer-role {
-            font-style: italic;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
-    <nav>
-        <h1>ND Computer Club</h1>
-    </nav>
-    <h1>About</h1>
-    <p>
-        The Notre Dame Computer Club encompasses all things computer-related, ranging from in-depth development topics to practical productivity tools. We organize events designed to help members acquire valuable computer skills, advance their careers in the tech industry, or simply engage in casual discussions about their interests in computer hardware and software.
-    </p>
-    <h1>Officers</h1>
-    <div>
-        <section class="officer-section">
-            <img src="/" alt="" class="officer-photo">
-            <h1 class="officer-name">Officer Name</h1>
-            <p class="officer-role">Officer Role</p>
-            <p class="officer-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta facere ipsa ducimus impedit repellendus et vitae ipsam similique, beatae illum! Quidem libero natus facere dolore nihil quod voluptatum cum eius. Sint, mollitia quasi hic tempore quos, facilis laborum delectus sequi velit iure at voluptates ad id aperiam excepturi, perferendis ipsum.</p>
-        </section>
 
+<body>
+
+    <div class="about_page_introduction">
+        <h1>About</h1>
+        <p>
+            The Notre Dame Computer Club encompasses all things computer-related, ranging from in-depth development topics to practical productivity tools. We organize events designed to help members acquire valuable computer skills, advance their careers in the tech industry, or simply engage in casual discussions about their interests in computer hardware and software.
+        </p>
+    </div>
+
+    <div class="faq">
+        <!-- this is the board memeber/club memerbs display elements, and rename the convention abit -->
         <section class="officer-section">
             <img src="/" alt="" class="officer-photo">
             <h1 class="officer-name">Officer Name</h1>
@@ -84,5 +25,6 @@
             <p class="officer-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta facere ipsa ducimus impedit repellendus et vitae ipsam similique, beatae illum! Quidem libero natus facere dolore nihil quod voluptatum cum eius. Sint, mollitia quasi hic tempore quos, facilis laborum delectus sequi velit iure at voluptates ad id aperiam excepturi, perferendis ipsum.</p>
         </section>
     </div>
+
 </body>
 </html>
