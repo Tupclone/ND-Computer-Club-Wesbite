@@ -3,6 +3,7 @@ Features:
 - about page
 - events oage
 - project page(idk if we need this yet?)
+- Google Doc with the ideas: https://docs.google.com/document/d/1vW0H5cbtnOZsuzazmo3ANpsPqpLF0NSsRPYk988gzLc/edit?tab=t.0
 
 
 let's start first since it's a basic website, maybe no framework is needed and vanilla web dev techniques should be sufficient, see data clubs's website for some inspiration on how to organize the website[https://dataclub-of-notre-dame.vercel.app/]
