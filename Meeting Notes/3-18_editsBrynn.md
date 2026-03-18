@@ -1,0 +1,6 @@
+- added an images folder
+- uploaded the computer club logo to the images folder
+- created an index.html and copied the home.html code into it
+    - this way the website will be able to run
+    - updated the index.html code
+- updated the officers
