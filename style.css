@@ -40,6 +40,19 @@ body{
     }
 }
 
-.greetings{
-    color:blue;
+.calendar{
+    /* align-content: center; */
+    /* display: grid; */
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    width: auto;
+    /* height: 100vh; */
+
+}
+
+#gcal{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
 }
