@@ -50,8 +50,45 @@ body{
 }
 
 .big-container{
-    background-color: #0091cb;
-    width: 80%;
+    width:90%;
+    margin:0 auto;
+}
+
+#board-members{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+.board-member-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    max-width:220px;
+}
+
+.board-member-photo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.board-member-name{
+    margin:12px 0 4px;
+    font-size:20px;
+}
+
+.board-member-role{
+    margin:0;
+    font-weight:600;
+}
+
+.board-member-bio{
+    margin:6px 0 0;
+    font-size:14px;
 }
 
 .interest-form {
