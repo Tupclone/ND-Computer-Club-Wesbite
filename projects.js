@@ -28,15 +28,11 @@ const PROJECTS = [
   }
 ];
 
-
-const grid = document.getElementById('project-grid');
-const popups = document.getElementById('project-popups');
-
-for (let i = 0; i < PROJECTS.length; ++i) {
-  let p = PROJECTS[i];
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.innerHTML = `
+buildCardGrid(
+  'project-grid',
+  'project-popups',
+  PROJECTS,
+  (p, i) => `
     <img src="${p.image}" alt="${p.title}">
     <div class="card-body">
       <h3>${p.title}</h3>
@@ -45,13 +41,8 @@ for (let i = 0; i < PROJECTS.length; ++i) {
       <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
       <button class="learn-more" data-index="${i}">Learn More</button>
-    </div>
-  `;
-  grid.appendChild(card);
-
-  const popup = document.createElement('div');
-  popup.className = "popup";
-  popup.innerHTML = `
+    </div>`,
+  (p, i) => `
     <button class="close-popup" data-index="${i}">X</button>
     <img src="${p.image}" alt="${p.title}">
     <div class="card-body">
@@ -60,26 +51,5 @@ for (let i = 0; i < PROJECTS.length; ++i) {
       <p>${p.description}</p>
       <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
-    </div>
-  `;
-
-  popups.appendChild(popup);
-  document.querySelector(`.learn-more[data-index="${i}"]`).addEventListener("click", openPopup);
-  document.querySelector(`.close-popup[data-index="${i}"]`).addEventListener("click", closePopup);
-};
-
-function openPopup(event) {
-  let openedI = parseInt(event.target.dataset.index);
-  for (let i = 0; i < popups.children.length; ++i) {
-    if (i === openedI) {
-      popups.children[i].style.display = "block";
-    } else {
-      popups.children[i].style.display = "none";
-    }
-  }
-  popups.style.display = "block";
-}
-
-function closePopup() {
-  popups.style.display = "none";
-}
+    </div>`
+);
