@@ -2,6 +2,7 @@ function loadNavbar() {
   document.getElementById('navbar').innerHTML = `
     <header class="header">
       <ul>
+        <li><img class="logo" src="images/logo.png"></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>

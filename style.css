@@ -29,16 +29,15 @@ body{
     & ul li {
     float: left;
     height: 100%;
-   
     }
 
     & ul li a {
     box-sizing: border-box;
     display: block;
     color: black;
-    text-align: left;
-    padding: 20px 24px 20px 0;
+    padding: 1rem 0.75rem;
     text-decoration: none;
+    text-align: center;
     height: 100%;
     font-size: 1.5rem;
     }
@@ -48,7 +47,11 @@ body{
     }
 
     .logo, .logo img {
+        float: left;
+        display: inline;
         height: 100%;
+        aspect-ratio: 1;
+        margin-right: 0.5rem;
     }
 }
 
@@ -60,6 +63,7 @@ body{
 
 .intro-txt{
     font-size: 1.5em;
+    margin: 0;
 }
 
 #board-members{
@@ -99,15 +103,25 @@ body{
     font-size:14px;
 }
 
-.interest-form {
+.primary-button {
   display: inline-block;
   padding: 10px 20px;
-  background: #0073e6;
-  color: white;
   text-decoration: none;
+  color: white;
   border-radius: 6px;
 }
 
+.interest-form {
+    background: #0073e6;
+}
+
+.instagram {
+    background: #e1306c;
+}
+
+.mailing-list {
+    background: #05629a;
+}
 
 .calendar{
     margin: 0 10%;
