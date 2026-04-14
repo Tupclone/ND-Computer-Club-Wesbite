@@ -1,5 +1,5 @@
 const GALLERY = [
-  { title: "Caption", image: "images/AI/ML/IMG_5311.JPG" },
+  { title: "Caption", image: "images/events/PlayYourProf26v2.png" },
   { title: "Caption", image: "images/AI/ML/IMG_5313.JPG" },
   { title: "Caption", image: "images/AI/ML/IMG_5314.JPG" }
 ];

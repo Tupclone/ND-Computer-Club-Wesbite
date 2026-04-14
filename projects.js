@@ -1,19 +1,19 @@
 const PROJECTS = [
   {
-    title: "Sample Project",
-    year: 2024,
+    title: "AI/ML Competition",
+    year: 2025,
     tags: ["Whatever"],
-    image: "images/AI/ML/IMG_5311.JPG",
-    description: "Description of project",
-    members: ["John Doe", "Jane Doe"],
+    image: "images/AI/ML/IMG_5316.JPG",
+    description: "Our Machine Learning and Artificial Intelligence Project teams spent the whole semester using new tools to bring their ideas to life. Team Hidden Gems took first place!",
+    members: ["David Meininger", "Stephen Playford", "Peter Bae", "Garret Connell", "Turner Piercy", "Lucky Borlongan", "Oliver Lee"],
     link: "https://github.com/..."  // optional
   },
   {
-    title: "Robotics Arm Controller",
-    year: 2024,
+    title: "Cybersecurity Committee",
+    year: 2025,
     tags: ["Python", "Hardware"],
-    image: "images/robotics-arm.jpg",
-    description: "Controlled a 6-DOF arm using inverse kinematics.",
+    image: "images/cybersecurity/IMG_5275.JPG",
+    description: "Focus on sharing knowledge of cyber security practices and techniques between team members for both exploring new interests and pursuing technical passions towards a career.",
     members: ["Alice Chen", "Bob Park"],
     link: "https://github.com/..."  // optional
   },
