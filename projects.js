@@ -2,7 +2,7 @@ const PROJECTS = [
   {
     title: "AI/ML Competition",
     year: 2025,
-    tags: ["Whatever"],
+    tags: ["AI"],
     image: "images/AI/ML/IMG_5316.JPG",
     description: "Our Machine Learning and Artificial Intelligence Project teams spent the whole semester using new tools to bring their ideas to life. Team Hidden Gems took first place!",
     members: ["David Meininger", "Stephen Playford", "Peter Bae", "Garret Connell", "Turner Piercy", "Lucky Borlongan", "Oliver Lee"],
@@ -38,9 +38,9 @@ buildCardGrid(
       <h3>${p.title}</h3>
       <span class="year">${p.year}</span>
       <p>${p.description}</p>
-      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join(', ')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
-      <button class="learn-more" data-index="${i}">Learn More</button>
+      <button class="primary-button learn-more" data-index="${i}">Learn More</button>
     </div>`,
   (p, i) => `
     <button class="close-popup" data-index="${i}">X</button>
@@ -49,7 +49,7 @@ buildCardGrid(
       <h2>${p.title}</h2>
       <span class="year">${p.year}</span>
       <p>${p.description}</p>
-      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join(', ')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
     </div>`
 );
