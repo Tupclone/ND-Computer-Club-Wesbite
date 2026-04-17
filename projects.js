@@ -1,19 +1,19 @@
 const PROJECTS = [
   {
-    title: "Sample Project",
-    year: 2024,
-    tags: ["Whatever"],
-    image: "images/AI/ML/IMG_5311.JPG",
-    description: "Description of project",
-    members: ["John Doe", "Jane Doe"],
+    title: "AI/ML Competition",
+    year: 2025,
+    tags: ["AI"],
+    image: "images/AI/ML/IMG_5316.JPG",
+    description: "Our Machine Learning and Artificial Intelligence Project teams spent the whole semester using new tools to bring their ideas to life. Team Hidden Gems took first place!",
+    members: ["David Meininger", "Stephen Playford", "Peter Bae", "Garret Connell", "Turner Piercy", "Lucky Borlongan", "Oliver Lee"],
     link: "https://github.com/..."  // optional
   },
   {
-    title: "Robotics Arm Controller",
-    year: 2024,
+    title: "Cybersecurity Committee",
+    year: 2025,
     tags: ["Python", "Hardware"],
-    image: "images/robotics-arm.jpg",
-    description: "Controlled a 6-DOF arm using inverse kinematics.",
+    image: "images/cybersecurity/IMG_5275.JPG",
+    description: "Focus on sharing knowledge of cyber security practices and techniques between team members for both exploring new interests and pursuing technical passions towards a career.",
     members: ["Alice Chen", "Bob Park"],
     link: "https://github.com/..."  // optional
   },
@@ -38,9 +38,9 @@ buildCardGrid(
       <h3>${p.title}</h3>
       <span class="year">${p.year}</span>
       <p>${p.description}</p>
-      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join(', ')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
-      <button class="learn-more" data-index="${i}">Learn More</button>
+      <button class="primary-button learn-more" data-index="${i}">Learn More</button>
     </div>`,
   (p, i) => `
     <button class="close-popup" data-index="${i}">X</button>
@@ -49,7 +49,7 @@ buildCardGrid(
       <h2>${p.title}</h2>
       <span class="year">${p.year}</span>
       <p>${p.description}</p>
-      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join(', ')}</div>
       ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
     </div>`
 );

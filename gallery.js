@@ -1,7 +1,7 @@
 const GALLERY = [
-  { title: "Caption", image: "images/AI/ML/IMG_5311.JPG" },
-  { title: "Caption", image: "images/AI/ML/IMG_5313.JPG" },
-  { title: "Caption", image: "images/AI/ML/IMG_5314.JPG" }
+  { title: "Play Your Prof Event", image: "images/events/PlayYourProf26v2.png" },
+  { title: "Mailing Lists", image: "images/COMPCLUB_Poster.jpg" },
+  { title: "ND Day Donations", image: "images/ND_DAY_COMPCLUB.jpg" }
 ];
 
 buildCardGrid(
@@ -12,7 +12,7 @@ buildCardGrid(
     <img src="${g.image}" alt="${g.title}">
     <div class="card-body">
       <h3>${g.title}</h3>
-      <button class="learn-more" data-index="${i}">View</button>
+      <button class="primary-button learn-more" data-index="${i}">View</button>
     </div>`,
   (g, i) => `
     <button class="close-popup" data-index="${i}">X</button>
