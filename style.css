@@ -35,7 +35,8 @@ body{
     box-sizing: border-box;
     display: block;
     color: black;
-    padding: 1rem 0.75rem;
+    text-align: left;
+    padding: 20px 24px 20px 10px;
     text-decoration: none;
     text-align: center;
     height: 100%;
@@ -44,6 +45,7 @@ body{
 
     & ul li a:hover {
     background-color: #0091cb;
+    border-radius: 12px;
     }
 
     .logo, .logo img {
