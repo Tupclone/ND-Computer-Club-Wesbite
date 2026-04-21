@@ -36,15 +36,19 @@ body{
     box-sizing: border-box;
     display: block;
     color: black;
-    text-align: left;
-    padding: 20px 24px 20px 0;
+    text-align: center;
+    padding: 20px 12px 0;
     text-decoration: none;
     height: 100%;
     font-size: 1.5rem;
     }
 
+    & ul li:first-child a {
+    padding-left: 0;
+    }
+
     & ul li a:hover {
-    background-color: #0091cb;
+    text-decoration: underline;
     }
 
     .logo, .logo img {
@@ -66,37 +70,57 @@ body{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:40px;
+    gap:56px 44px;
+    padding: 24px 0 40px;
 }
 
 .board-member-section{
+    background: #fff;
+    padding: 10px 10px 52px;
+    box-shadow: 3px 6px 16px rgba(0,0,0,0.32), 0 1px 3px rgba(0,0,0,0.1);
     display:flex;
     flex-direction:column;
     align-items:center;
-    text-align:center;
-    max-width:220px;
+    max-width:180px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.board-member-section:nth-child(3n+1) { transform: rotate(-2.5deg); }
+.board-member-section:nth-child(3n+2) { transform: rotate(1.8deg); }
+.board-member-section:nth-child(3n)   { transform: rotate(-1.2deg); }
+
+.board-member-section:hover {
+    transform: rotate(0deg) scale(1.07);
+    box-shadow: 6px 14px 30px rgba(0,0,0,0.42);
+    z-index: 10;
 }
 
 .board-member-photo{
-    width:120px;
-    height:120px;
+    width:160px;
+    height:160px;
     object-fit:cover;
-    border-radius:50%;
+    border-radius: 0;
+    display: block;
 }
 
-.board-member-name{
-    margin:12px 0 4px;
-    font-size:20px;
+.board-member-section h3,
+.board-member-section p {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    margin: 4px 0 0;
 }
 
-.board-member-role{
-    margin:0;
-    font-weight:600;
+.board-member-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 12px;
 }
 
-.board-member-bio{
-    margin:6px 0 0;
-    font-size:14px;
+.board-member-section p {
+    font-size: 1rem;
+    color: #555;
 }
 
 .interest-form {
