@@ -29,16 +29,20 @@ body{
     & ul li {
     float: left;
     height: 100%;
-   
     }
 
     & ul li a {
     box-sizing: border-box;
     display: block;
     color: black;
+<<<<<<< HEAD
     text-align: center;
     padding: 20px 12px 0;
+=======
+    padding: 1rem 0.75rem;
+>>>>>>> f6db0704295dc62007bb22f66bbe36695159dced
     text-decoration: none;
+    text-align: center;
     height: 100%;
     font-size: 1.5rem;
     }
@@ -52,7 +56,11 @@ body{
     }
 
     .logo, .logo img {
+        float: left;
+        display: inline;
         height: 100%;
+        aspect-ratio: 1;
+        margin-right: 0.5rem;
     }
 }
 
@@ -64,6 +72,7 @@ body{
 
 .intro-txt{
     font-size: 1.5em;
+    margin: 0;
 }
 
 #board-members{
@@ -123,15 +132,27 @@ body{
     color: #555;
 }
 
-.interest-form {
+.primary-button {
   display: inline-block;
   padding: 10px 20px;
-  background: #0073e6;
-  color: white;
   text-decoration: none;
+  color: white;
   border-radius: 6px;
+  font-size: 1em;
+  border: none;
 }
 
+.interest-form, .learn-more {
+    background: #0073e6;
+}
+
+.instagram {
+    background: #e1306c;
+}
+
+.mailing-list {
+    background: #05629a;
+}
 
 .calendar{
     margin: 0 10%;
