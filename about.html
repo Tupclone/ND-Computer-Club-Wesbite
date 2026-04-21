@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +8,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 </head>
-=======
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ND Computer Club</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
->>>>>>> f6db0704295dc62007bb22f66bbe36695159dced
 
-  <body>
+<body>
 
-<<<<<<< HEAD
 <div class="big-container">
 <div id="navbar"></div>
 <br><br><br>
@@ -30,79 +20,41 @@
     The Notre Dame Computer Club encompasses all things computer-related, ranging from in-depth development topics to practical productivity tools. We organize events designed to help members acquire valuable computer skills, advance their careers in the tech industry, or simply engage in casual discussions about their interests in computer hardware and software.
     </p>
 </section>
-=======
-    <div class="big-container">
-    <div id="navbar"></div>
 
-    <section>
-      <h1>About</h1>
-      <p>
-        The Notre Dame Computer Club encompasses all things computer-related, ranging from in-depth development topics to practical productivity tools. We organize events designed to help members acquire valuable computer skills, advance their careers in the tech industry, or simply engage in casual discussions about their interests in computer hardware and software.
-      </p>
-    </section>
->>>>>>> f6db0704295dc62007bb22f66bbe36695159dced
+<section>
+    <h1>FAQ</h1>
+</section>
 
-    <section>
-      <h1>FAQ</h1>
-    </section>
-
-    <section>
-      <h1>Board Members</h1>
-      <div id="board-members"></div>
-      <script>
-        const BOARD = [
-        { name: "Dylan Scott",   role: "President",             major: "Computer Engineering", year: 2027 },
-        { name: "Brynn Johnson", role: "Vice President",        major: "Computer Science",     year: 2027 },
-        { name: "Sofia Cardona", role: "Treasurer",             major: "Computer Science",     year: 2027 },
-        { name: "Alex Schumann", role: "Cyber Security Lead",   major: "Computer Science",     year: 2026 },
-        { name: "Gabby Klee",    role: "Project Manager",       major: "Computer Science",     year: 2026 },
-        { name: "Anika Joseph",  role: "Social Media Manager",  major: "Computer Science",     year: 2029 },
-        ];
-        const el = document.getElementById('board-members');
-        el.innerHTML = BOARD.map(m => `
-        <div class="board-member-section">
+<section>
+    <h1>Board Members</h1>
+    <div id="board-members"></div>
+    <script>
+    const BOARD = [
+      { name: "Dylan Scott",   role: "President",            major: "Computer Engineering", year: 2027 },
+      { name: "Brynn Johnson", role: "Vice President",        major: "Computer Science",     year: 2027 },
+      { name: "Sofia Cardona", role: "Treasurer",             major: "Computer Science",     year: 2027 },
+      { name: "Alex Schumann", role: "Cyber Security Lead",   major: "Computer Science",     year: 2026 },
+      { name: "Gabby Klee",    role: "Project Manager",       major: "Computer Science",     year: 2026 },
+      { name: "Anika Joseph",  role: "Social Media Manager",  major: "Computer Science",     year: 2029 },
+    ];
+    const el = document.getElementById('board-members');
+    el.innerHTML = BOARD.map(m => `
+      <div class="board-member-section">
         <img src="/images/board/${m.name.replace(' ','')}.png" class="board-member-photo">
         <h3>${m.name}</h3>
         <p>${m.role}</p>
         <p>${m.major} • ${m.year}</p>
-        </div>`).join('');
-      </script>
-    </section>
-
-<<<<<<< HEAD
-<h1>Board Members</h1>
-
-<div id="board-members"></div>
-<script>
-const BOARD = [
-  { name: "Dylan Scott",   role: "President",            major: "Computer Engineering", year: 2027 },
-  { name: "Brynn Johnson", role: "Vice President",        major: "Computer Science",     year: 2027 },
-  { name: "Sofia Cardona", role: "Treasurer",             major: "Computer Science",     year: 2027 },
-  { name: "Alex Schumann", role: "Cyber Security Lead",   major: "Computer Science",     year: 2026 },
-  { name: "Gabby Klee",    role: "Project Manager",       major: "Computer Science",     year: 2026 },
-  { name: "Anika Joseph",  role: "Social Media Manager",  major: "Computer Science",     year: 2029 },
-];
-const el = document.getElementById('board-members');
-el.innerHTML = BOARD.map(m => `
-  <div class="board-member-section">
-    <img src="/images/board/${m.name.replace(' ','')}.png" class="board-member-photo">
-    <h3>${m.name}</h3>
-    <p>${m.role}</p>
-    <p>${m.major} • ${m.year}</p>
-  </div>`).join('');
-</script>
+      </div>`).join('');
+    </script>
 </section>
 
 <section class="contacts">
-
-<h1>Contacts</h1>
-
-<a href="https://ndacm.dev/instagram"><i class="fab fa-instagram"></i> Instagram</a>
-<br>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdNOXPPxVKRKZHulJypc1nvLSb52hSPq_a0kH9kRgDz5scK0w/viewform">
-<i class="fas fa-envelope"></i> Join Our Mailing List
-</a>
-
+    <h1>Contacts</h1>
+    <a href="https://ndacm.dev/instagram"><i class="fab fa-instagram"></i> Instagram</a>
+    <br>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNOXPPxVKRKZHulJypc1nvLSb52hSPq_a0kH9kRgDz5scK0w/viewform">
+        <i class="fas fa-envelope"></i> Join Our Mailing List
+    </a>
 </section>
 
 </div>
@@ -110,16 +62,4 @@ el.innerHTML = BOARD.map(m => `
 <script src="script.js"></script>
 
 </body>
-=======
-    <section class="contacts">
-      <h1>Contacts</h1>
-      <a class="primary-button instagram" href="https://ndacm.dev/instagram">Instagram</a>
-      <a class="primary-button mailing-list" href="https://docs.google.com/forms/d/e/1FAIpQLSdNOXPPxVKRKZHulJypc1nvLSb52hSPq_a0kH9kRgDz5scK0w/viewform">
-        Join Our Mailing List
-      </a>
-    </section>
-  </div>
-  <script src="script.js"></script>
-  </body>
->>>>>>> f6db0704295dc62007bb22f66bbe36695159dced
 </html>
