@@ -9,9 +9,7 @@
   <body>
     <div class="big-container">
     <div id="navbar"></div>
-            <!-- <li class="logo"><img src="images/logo.png" /></li> -->
-
-
+    
       <!-- add news letter by reaching out to the Brynn -->
 
     <div class="greetings">
@@ -32,6 +30,8 @@
 
       We are always open to collaboration — whether you are an ACMS, first year, or another student organisation, please don’t hesitate to reach out!
       <br><br>
+      The Notre Dame Computer Club encompasses all things computer-related, ranging from in-depth development topics to practical productivity tools. We organize events designed to help members acquire valuable computer skills, advance their careers in the tech industry, or simply engage in casual discussions about their interests in computer hardware and software.
+
 
       If you have any questions, or would like to contribute to the club, feel free to email us at <strong>CSE.cseclub.1@nd.edu</strong>
       </p>
@@ -39,16 +39,80 @@
       <br>
       <h1>News</h1>
       <br>
+      <br>
+      <br>
+      <br>
+
+
       <h1>Gallery</h1>
-      <div id="gallery-grid" class="card-grid"></div>
-      <div id="gallery-popups" class="card-popups"></div>
+      <div id="gallery-grid" class="photo-grid"></div>
       </div>
 
-      <a class="interest-form" href="https://www.google.com">Interest Form</a>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <div class="interest-form">
+        <a href="https://www.google.com">Interest Form</a>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <h1>Events</h1>
+      <p class="">Periodically we...</p>
+
+      <div class="calendar">
+        <iframe class="gcal" src="https://calendar.google.com/calendar/embed?src=c_6b055d34f52cd6e7c1352629cac4c446ad922c48093e094fa03a18c09fad15c3%40group.calendar.google.com&ctz=America%2FIndiana%2FIndianapolis&showTitle=0&showPrint=0&showCalendars=0&showTz=0" height="680" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <section>
+        <h1>Board Members</h1>
+        <div id="board-members"></div>
+        <script>
+        const BOARD = [
+          { name: "Dylan Scott",   role: "President",            major: "Computer Engineering", year: 2027 },
+          { name: "Brynn Johnson", role: "Vice President",        major: "Computer Science",     year: 2027 },
+          { name: "Sofia Cardona", role: "Treasurer",             major: "Computer Science",     year: 2027 },
+          { name: "Alex Schumann", role: "Cyber Security Lead",   major: "Computer Science",     year: 2026 },
+          { name: "Gabby Klee",    role: "Project Manager",       major: "Computer Science",     year: 2026 },
+          { name: "Anika Joseph",  role: "Social Media Manager",  major: "Computer Science",     year: 2029 },
+        ];
+        const el = document.getElementById('board-members');
+        el.innerHTML = BOARD.map(m => `
+          <div class="board-member-section">
+            <img src="/images/board/${m.name.replace(' ','')}.png" class="board-member-photo">
+            <h3>${m.name}</h3>
+            <p>${m.role}</p>
+            <p>${m.major} • ${m.year}</p>
+          </div>`).join('');
+        </script>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="contacts">
+        <h1>Contacts</h1>
+        <a href="https://ndacm.dev/instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNOXPPxVKRKZHulJypc1nvLSb52hSPq_a0kH9kRgDz5scK0w/viewform">
+            <i class="fas fa-envelope"></i> Join Our Mailing List
+        </a>
+    </section>
       
     </div>
 
   <script src="script.js"></script>
-  <script src="gallery.js"></script>
   </body>
 </html>
