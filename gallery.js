@@ -4,18 +4,10 @@ const GALLERY = [
   { title: "ND Day Donations", image: "images/ND_DAY_COMPCLUB.jpg" }
 ];
 
-buildCardGrid(
-  'gallery-grid',
-  'gallery-popups',
-  GALLERY,
-  (g, i) => `
-    <img src="${g.image}" alt="${g.title}">
-    <div class="card-body">
-      <h3>${g.title}</h3>
-      <button class="primary-button learn-more" data-index="${i}">View</button>
-    </div>`,
-  (g, i) => `
-    <button class="close-popup" data-index="${i}">X</button>
-    <img src="${g.image}" alt="${g.title}">
-    <div class="card-body"><h2>${g.title}</h2></div>`
-);
+const grid = document.getElementById('gallery-grid');
+GALLERY.forEach(item => {
+  const card = document.createElement('div');
+  card.className = 'gallery-card';
+  card.innerHTML = `<img src="${item.image}" alt="${item.title}"><span>${item.title}</span>`;
+  grid.appendChild(card);
+});
