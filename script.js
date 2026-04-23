@@ -9,6 +9,28 @@ document.getElementById('navbar').innerHTML = `
   </header>
 `;
 
+function renderGallery(gridId, items, cardHTML, cardClass = 'project-card') {
+  const grid = document.getElementById(gridId);
+  if (grid) grid.innerHTML = items.map((item, i) =>
+    `<div class="${cardClass}">${cardHTML(item, i)}</div>`
+  ).join('');
+}
+
+function createPopup(popupHTML) { // popupHTML is a string of HTML
+  let popup = document.createElement("div");
+  popup.addEventListener("click", e => {
+    if (e.target.className === "popup-exit") document.body.removeChild(popup);
+  });
+  popup.className = "popup";
+  popup.innerHTML = `
+    <div class="popup-content">
+      <button class="popup-exit">X</button>
+      ${popupHTML}
+    </div>`;
+
+  document.body.appendChild(popup);
+}
+
 // create image gallery on home page
 const GALLERY = [
   { title: "Play Your Prof Event", image: "images/events/PlayYourProf26v2.png" },
@@ -17,12 +39,14 @@ const GALLERY = [
 ];
 renderGallery('gallery-grid', GALLERY, item => `<img src="${item.image}" alt="${item.title}"><span>${item.title}</span>`, 'photo-card');
 
-function renderGallery(gridId, items, cardHTML, cardClass = 'project-card') {
-  const grid = document.getElementById(gridId);
-  if (grid) grid.innerHTML = items.map((item, i) =>
-    `<div class="${cardClass}">${cardHTML(item, i)}</div>`
-  ).join('');
-}
+// create popups for each photo on home-page
+const PHOTOS = [...document.getElementsByClassName("photo-card")];
+PHOTOS.forEach(photoCard => {
+  let photoSrc = photoCard.querySelector("img").src;
+  photoCard.addEventListener("click", () => {
+    createPopup(`<img src=${photoSrc} />`);
+  });
+});
 
 // create project gallery on project page
 const PROJECTS = [
@@ -54,6 +78,7 @@ const PROJECTS = [
     link: null
   }
 ];
+
 // re-use render gallery for project
 renderGallery(
   'project-grid',
