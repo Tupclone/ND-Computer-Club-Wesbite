@@ -120,8 +120,23 @@ h1{
     color: #555;
 }
 
-.interest-form, .learn-more {
+.interest-form {
+    display: block;
+    width: fit-content;
+    margin: 32px auto;
+    padding: 16px 48px;
+    background: transparent;
+    color: #0073e6;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid #0073e6;
+    transition: background 0.2s, color 0.2s;
+}
+
+.interest-form:hover {
     background: #0073e6;
+    color: white;
 }
 
 .instagram {
