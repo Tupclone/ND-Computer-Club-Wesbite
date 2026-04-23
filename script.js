@@ -1,66 +1,87 @@
-function loadNavbar() {
-  document.getElementById('navbar').innerHTML = `
-    <header class="header">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resources.html">Resources</a></li>
-      </ul>
-    </header>
-  `;
-}
+// create header for all pages
+document.getElementById('navbar').innerHTML = `
+  <header class="header">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </header>
+`;
 
-        // <li style="float: right"><img class="logo" src="images/logo.png"></li>        
+// create image gallery on home page
+const GALLERY = [
+  { title: "Play Your Prof Event", image: "images/events/PlayYourProf26v2.png" },
+  { title: "Mailing Lists", image: "images/COMPCLUB_Poster.jpg" },
+  { title: "ND Day Donations", image: "images/ND_DAY_COMPCLUB.jpg" }
+];
+renderGallery('gallery-grid', GALLERY, item => `<img src="${item.image}" alt="${item.title}"><span>${item.title}</span>`, 'photo-card');
 
-loadNavbar();
-
-function buildCardGrid(gridId, popupsId, items, cardHTML, popupHTML) {
+function renderGallery(gridId, items, cardHTML, cardClass = 'project-card') {
   const grid = document.getElementById(gridId);
-  const popups = document.getElementById(popupsId);
-  items.forEach((item, i) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = cardHTML(item, i);
-    grid.appendChild(card);
-
-    const popup = document.createElement('div');
-    popup.className = 'popup';
-    popup.innerHTML = popupHTML(item, i);
-    popups.appendChild(popup);
-
-    grid.querySelector(`.learn-more[data-index="${i}"]`).addEventListener('click', openPopup);
-    popups.querySelector(`.close-popup[data-index="${i}"]`).addEventListener('click', closePopup);
-  });
+  if (grid) grid.innerHTML = items.map((item, i) =>
+    `<div class="${cardClass}">${cardHTML(item, i)}</div>`
+  ).join('');
 }
 
-function openPopup(event) {
-  const popups = event.target.closest('.card').parentElement.nextElementSibling;
-  let openedI = parseInt(event.target.dataset.index);
-  for (let i = 0; i < popups.children.length; ++i) {
-    popups.children[i].style.display = i === openedI ? 'block' : 'none';
+// create project gallery on project page
+const PROJECTS = [
+  {
+    title: "AI/ML Competition",
+    year: 2025,
+    tags: ["AI"],
+    image: "images/AI/ML/IMG_5316.JPG",
+    description: "Our Machine Learning and Artificial Intelligence Project teams spent the whole semester using new tools to bring their ideas to life. Team Hidden Gems took first place!",
+    members: ["David Meininger", "Stephen Playford", "Peter Bae", "Garret Connell", "Turner Piercy", "Lucky Borlongan", "Oliver Lee"],
+    link: "https://github.com/..."
+  },
+  {
+    title: "Cybersecurity Committee",
+    year: 2025,
+    tags: ["Python", "Hardware"],
+    image: "images/cybersecurity/IMG_5275.JPG",
+    description: "Focus on sharing knowledge of cyber security practices and techniques between team members for both exploring new interests and pursuing technical passions towards a career.",
+    members: ["Alice Chen", "Bob Park"],
+    link: "https://github.com/..."
+  },
+  {
+    title: "Campus Event Scraper",
+    year: 2023,
+    tags: ["Node.js", "Web"],
+    image: "images/event-scraper.png",
+    description: "Scraped and aggregated campus events into a unified feed.",
+    members: ["Dana Liu"],
+    link: null
   }
-  popups.style.display = 'block';
-}
+];
+// re-use render gallery for project
+renderGallery(
+  'project-grid',
+  PROJECTS,
+  p => `
+    <img src="${p.image}" alt="${p.title}">
+    <div class="project-card-body">
+      <h3>${p.title}</h3>
+      <span class="year">${p.year}</span>
+      <p>${p.description}</p>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join(', ')}</div>
+      ${p.link ? `<a href="${p.link}" target="_blank">GitHub →</a>` : ''}
+    </div>`
+);
 
-function closePopup(event) {
-  event.target.closest('.card-popups').style.display = 'none';
-}
 
+// resource page: create index list of resources
 const indexList = document.querySelector('.index-list');
 if (indexList) {
   const previewImg = document.getElementById('preview-img');
   const previewDesc = document.getElementById('preview-desc');
   const preview = document.querySelector('.index-preview');
-
   indexList.querySelectorAll('a').forEach(link => {
     link.addEventListener('mouseenter', () => {
       previewImg.src = link.dataset.preview;
       previewDesc.textContent = link.dataset.desc || '';
       preview.classList.add('visible');
     });
-    link.addEventListener('mouseleave', () => {
-      preview.classList.remove('visible');
-    });
+    link.addEventListener('mouseleave', () => preview.classList.remove('visible'));
   });
 }
